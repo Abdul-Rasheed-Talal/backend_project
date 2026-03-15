@@ -15,5 +15,8 @@
     "js"
   ],
   "author": "Abdul Rasheed Talal",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.8.1"
+  }
 }
