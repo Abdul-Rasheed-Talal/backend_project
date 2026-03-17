@@ -1,8 +1,18 @@
 import mongoose from "mongoose";
+import { app } from "./app.js";
 import { DB_NAME } from "./constants.js";
 import connectDB from "./db/db.js";
-import 'dotenv/config';
+import "dotenv/config";
 connectDB()
+  .then(() => {
+    app.listen(process.env.PORT || 5000, () => {
+      console.log(`Server is running at port ${process.env.PORT}`);
+    });
+  })
+  .catch((error) => {
+    console.log("MONGODB Connection Failed", error);
+  });
+
 
 
 
